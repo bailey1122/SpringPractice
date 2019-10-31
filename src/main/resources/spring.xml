@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		https://www.springframework.org/schema/context/spring-context.xsd"
+       xmlns:context="http://www.springframework.org/schema/context">
+
+    <context:component-scan base-package="com.spr"/>
+
+
+<!--    <alias name="fromName" alias="toName"/>-->
+
+
+<!--    <bean id="clientService" class="com.spr.instantiation.ClientService"-->
+<!--          factory-method="createInstance"/>-->
+
+
+<!--    <bean id="serviceLocator" class="com.spr.instantiation.DefaultServiceLocator"/>-->
+
+<!--    <bean id="clientService" factory-bean="serviceLocator"-->
+<!--          factory-method="createClientServiceInstance"/>-->
+
+<!--    <bean id="accountService" factory-bean="serviceLocator"-->
+<!--          factory-method="createAccountServiceInstance"/>-->
+
+
+<!--    <bean id="beanOne" class="com.spr.di.ThingOne">-->
+<!--        <constructor-arg ref="beanTwo"/>-->
+<!--        <constructor-arg ref="beanThree"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="beanTwo" class="com.spr.di.ThingTwo"/>-->
+
+<!--    <bean id="beanThree" class="com.spr.di.ThingThree"/>-->
+
+
+<!--    <bean id="exampleBean" class="com.spr.di.ExampleBean">-->
+<!--        <constructor-arg type="int" value="7500000"/>-->
+<!--        <constructor-arg type="java.lang.String" value="42"/>-->
+<!--    </bean>-->
+
+
+<!--    <bean id="exBean" class="com.spr.di.ExBean">-->
+<!--        <property name="beanOne">-->
+<!--            <ref bean="anotherExampleBean"/>-->
+<!--        </property>-->
+<!--        -->
+<!--        <property name="beanTwo" ref="yetAnotherBean"/>-->
+<!--        <property name="integerProperty" value="1"/>-->
+<!--    </bean>-->
+<!--    -->
+<!--    <bean id="anotherExampleBean" class="com.spr.di.AnotherBean"/>-->
+<!--    <bean id="yetAnotherBean" class="com.spr.di.YetAnotherBean"/>-->
+
+
+<!--    <bean id="exBean2" class="com.spr.di.ExBean2">-->
+<!--        <constructor-arg>-->
+<!--            <ref bean="anotherExampleBean"/>-->
+<!--        </constructor-arg>-->
+<!--        -->
+<!--        <constructor-arg ref="yetAnotherBean"/>-->
+<!--        -->
+<!--        <constructor-arg type="int" value="1"/>-->
+<!--    </bean>-->
+<!--    -->
+<!--    <bean id="anotherExampleBean" class="com.spr.di.AnotherBean"/>-->
+<!--    <bean id="yetAnotherBean" class="com.spr.di.YetAnotherBean"/>-->
+
+
+<!--    <bean id="exBean3" class="com.spr.di.ExBean3" factory-method="createInstance">-->
+<!--        <constructor-arg ref="anotherExampleBean"/>-->
+<!--        <constructor-arg ref="yetAnotherBean"/>-->
+<!--        <constructor-arg value="1"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="anotherExampleBean" class="com.spr.di.AnotherBean"/>-->
+<!--    <bean id="yetAnotherBean" class="com.spr.di.YetAnotherBean"/>-->
+
+
+<!--    <bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">-->
+<!--        &lt;!&ndash; results in a setDriverClassName(String) call &ndash;&gt;-->
+<!--        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>-->
+<!--        <property name="url" value="jdbc:mysql://localhost:3306/mydb"/>-->
+<!--        <property name="username" value="root"/>-->
+<!--        <property name="password" value="masterkaoli"/>-->
+<!--    </bean>-->
+
+
+<!--    <bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource">-->
+<!--        destroy-method="close"-->
+<!--        p:driverClassName="com.mysql.jdbc.Driver"-->
+<!--        p:url="jdbc:mysql://localhost:3306/mydb"-->
+<!--        p:username="root"-->
+<!--        p:password="masterkaoli"/>-->
+
+
+<!--    <bean id="mappings"-->
+<!--          class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">-->
+
+<!--        &lt;!&ndash; typed as a java.util.Properties &ndash;&gt;-->
+<!--        <property name="properties">-->
+<!--            <value>-->
+<!--                jdbc.driver.className=com.mysql.jdbc.Driver-->
+<!--                jdbc.url=jdbc:mysql://localhost:3306/mydb-->
+<!--            </value>-->
+<!--        </property>-->
+<!--    </bean>-->
+
+
+<!--    // this form is preferable-->
+<!--    <bean id="theTargetBean" class="..."/>-->
+
+<!--    <bean id="theClientBean" class="...">-->
+<!--        <property name="targetName">-->
+<!--            <idref bean="theTargetBean"/>-->
+<!--        </property>-->
+<!--    </bean>-->
+
+
+<!--    <bean id="theTargetBean" class="..."/>-->
+
+<!--    <bean id="client" class="...">-->
+<!--        <property name="targetName" value="theTargetBean"/>-->
+<!--    </bean>-->
+
+
+<!--    <bean id="accountService" class="com.spr.smth.Simple">-->
+<!--    </bean>-->
+
+<!--    <bean id="accountService"-->
+<!--          class="org.springframework.aop.framework.ProxyFactoryBean">-->
+<!--        <property name="target">-->
+<!--            <ref parent="accountService"/>-->
+<!--        </property>-->
+<!--    </bean>-->
+
+
+<!--    <bean id="outer" class="...">-->
+<!--        <property name="target">-->
+<!--            <bean class="com.spr.smth.Person">-->
+<!--                <property name="name" value="Fiona Apple"/>-->
+<!--                <property name="age" value="25"/>-->
+<!--            </bean>-->
+<!--        </property>-->
+<!--    </bean>-->
+
+
+<!--    <bean id="moreComplexObject" class="com.spr.smth.ComplexObject">-->
+<!--        <property name="adminEmails">-->
+<!--            <props>-->
+<!--                <prop key="administrator">administrator@example.org</prop>-->
+<!--                <prop key="support">support@example.org</prop>-->
+<!--                <prop key="development">development@example.org</prop>-->
+<!--            </props>-->
+<!--        </property>-->
+<!--        -->
+<!--        <property name="someList">-->
+<!--            <list>-->
+<!--                <value>List</value>-->
+<!--                <ref bean="myDataSource" />-->
+<!--            </list>-->
+<!--        </property>-->
+<!--        -->
+<!--        <property name="someMap">-->
+<!--            <map>-->
+<!--                <entry key="an entry" value="Map"/>-->
+<!--                <entry key="a ref" value-ref="myDataSource"/>-->
+<!--            </map>-->
+<!--        </property>-->
+<!--        -->
+<!--        <property name="someSet">-->
+<!--            <set>-->
+<!--                <value>Set</value>-->
+<!--                <ref bean="myDataSource"/>-->
+<!--            </set>-->
+<!--        </property>-->
+<!--    </bean>-->
+
+
+<!--    <bean id="parent" abstract="true" class="com.spr.smth.ComplexObject">-->
+<!--        <property name="adminEmails">-->
+<!--            <props>-->
+<!--                <prop key="administrator">administrator@example.com</prop>-->
+<!--                <prop key="support">support@example.com</prop>-->
+<!--            </props>-->
+<!--        </property>-->
+<!--    </bean>-->
+<!--    <bean id="child" parent="parent">-->
+<!--        <property name="adminEmails">-->
+<!--            <props merge="true">-->
+<!--                <prop key="sales">sales@example.com</prop>-->
+<!--                <prop key="support">support@example.co.uk</prop>-->
+<!--            </props>-->
+<!--        </property>-->
+<!--    </bean>-->
+
+
+<!--    <bean id="sMap" class="com.spr.depandconf.SomeClass">-->
+<!--        <property name="accounts">-->
+<!--            <map>-->
+<!--                <entry key="one" value="9.99"/>-->
+<!--                <entry key="two" value="1.77"/>-->
+<!--                <entry key="three" value="4.44"/>-->
+<!--            </map>-->
+<!--        </property>-->
+<!--    </bean>-->
+
+
+<!--    <bean class="ExampleEmpty">-->
+<!--        <property name="email" value=""/>-->
+<!--    </bean>-->
+
+
+<!--    <bean class="ExNull">-->
+<!--        <property name="email">-->
+<!--            <null/>-->
+<!--        </property>-->
+<!--    </bean>-->
+
+
+<!--    <bean name="classic" class="com.spr.Ex">-->
+<!--        <property name="email" value="someone@somewhere.com"/>-->
+<!--    </bean>-->
+<!--    -->
+<!--    <bean name="p-namespace" class="com.spr.Ex"-->
+<!--        p:email="someone@somewhere.com"/>-->
+<!--    </bean>-->
+
+
+<!--    <bean name="john-classic" class="com.spr.smth.Person">-->
+<!--        <property name="name" value="John Doe"/>-->
+<!--        <property name="spouse" ref="jane"/>-->
+<!--    </bean>-->
+<!--    -->
+<!--    <bean name="john-modern" class="com.spr.smth.Person"-->
+<!--        p:name="John Doe"-->
+<!--        p:spouse-ref="jane"/>-->
+<!--    </bean>-->
+
+<!--    <bean name="jane" class="com.spr.smth.Person">-->
+<!--        <property name="name" value="Jane Doe"/>-->
+<!--    </bean>-->
+
+
+<!--    <bean id="beanTwo" class="com.spr.di.ThingTwo"/>-->
+<!--    <bean id="beanThree" class="com.spr.di.ThingThree"/>-->
+<!--    -->
+<!--    <bean id="beanOne" class="com.spr.di.ThingOne">-->
+<!--        <constructor-arg name="thingTwo" ref="beanTwo"/>-->
+<!--        <constructor-arg name="thingThree" ref="beanThree"/>-->
+<!--        <constructor-arg name="email" value="something@somewhere.com"/>-->
+<!--    </bean>-->
+<!--    -->
+<!--    <bean id="beanOne" class="com.spr.di.ThingOne"-->
+<!--          c:thingTwo-ref="beanTwo"-->
+<!--          c:thingThree="beanThree"-->
+<!--          c:email="something@somewhere.com"/>-->
+<!--    -->
+<!--    <bean id="beanOne" class="com.spr.di.ThingOne"-->
+<!--          c:_0-ref="beanTwo"-->
+<!--          c:_1-ref="beanThree"-->
+<!--          c:_2="something@somewhere.com"/>-->
+
+
+<!--    <bean id="something" class="things.ThingOne">-->
+<!--        <property name="fred.bob.sammy" value="123"/>-->
+<!--    </bean>-->
+
+
+<!--    <bean id="beanOne" class="com.spr.di.ExBean" depends-on="manager, accountDao">-->
+<!--        <property name="manager" ref="manager"/>-->
+<!--    </bean>-->
+<!--    -->
+<!--    <bean id="manager" class="ManagerBean" />-->
+<!--    <bean id="accountDao" class="com.spr.di.JdbcAccDao"/>-->
+
+
+<!--    <bean id="lazy" class="com.spr.smth.ExpensiveToCreateBean" lazy-init="true"/>-->
+<!--    <bean name="not.lazy" class="com.spr.smth.AnotherOne"/>-->
+
+
+
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
