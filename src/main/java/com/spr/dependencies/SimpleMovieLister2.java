@@ -1,4 +1,4 @@
-package com.spr.di;
+package com.spr.dependencies;
 
 // setter-based Dependency Injection
 public class SimpleMovieLister2 {

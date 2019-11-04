@@ -1,4 +1,4 @@
-package com.spr.di;
+package com.spr.dependencies;
 
 // by using a static factory method
 public class ExBean3 {

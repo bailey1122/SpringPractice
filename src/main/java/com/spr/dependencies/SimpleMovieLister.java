@@ -1,4 +1,4 @@
-package com.spr.di;
+package com.spr.dependencies;
 
 // constructor-based dependency injection
 public class SimpleMovieLister {

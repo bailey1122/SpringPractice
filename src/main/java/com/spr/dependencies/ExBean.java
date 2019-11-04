@@ -1,4 +1,4 @@
-package com.spr.di;
+package com.spr.dependencies;
 
 // setter-based DI
 public class ExBean {

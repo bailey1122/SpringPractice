@@ -1,4 +1,4 @@
-package com.spr.di;
+package com.spr.dependencies;
 
 // constructor argument name
 public class ExampleBean {

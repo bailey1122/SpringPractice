@@ -1,4 +1,4 @@
-package com.spr.di;
+package com.spr.dependencies;
 
 // constructor argument resolution
 public class ThingOne {

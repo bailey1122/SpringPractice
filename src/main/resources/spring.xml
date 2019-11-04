@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context
-		https://www.springframework.org/schema/context/spring-context.xsd"
+		https://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd"
        xmlns:context="http://www.springframework.org/schema/context">
+<!--       default-destroy-method="destroy">-->
+<!--        default-init-method="init">-->
+
 
     <context:component-scan base-package="com.spr"/>
 
@@ -198,7 +201,7 @@
 <!--    </bean>-->
 
 
-<!--    <bean id="sMap" class="com.spr.depandconf.SomeClass">-->
+<!--    <bean id="sMap" class="com.spr.di.SomeClass">-->
 <!--        <property name="accounts">-->
 <!--            <map>-->
 <!--                <entry key="one" value="9.99"/>-->
@@ -282,6 +285,95 @@
 <!--    <bean name="not.lazy" class="com.spr.smth.AnotherOne"/>-->
 
 
+<!--    <bean id="myCommand" class="fiona.apple.AsyncCommand" scope="prototype">-->
+<!--    </bean>-->
+
+<!--    <bean id="commandManager" class="fiona.apple.CommandManager">-->
+<!--        <lookup-method name="myCommand" bean="myCommand"/>-->
+<!--    </bean>-->
+
+
+<!--    <bean id="myValueCalculator" class="com.spr.dependencies.MyValueCalculator">-->
+<!--        <replaced-method name="computeValue" replacer="replacementComputeValue">-->
+<!--            <arg-type>String</arg-type>-->
+<!--        </replaced-method>-->
+<!--    </bean>-->
+<!--    -->
+<!--    <bean id="replacementComputeValue" class="com.spr.dependencies.ReplacementComputeValue"/>-->
+
+
+<!--    <bean id="accountService" class="com.spr.scopes.DefaultAccountService"/>-->
+<!--    <bean id="accountService2" class="com.spr.scopes.DefaultAccountService" scope="singleton"/>-->
+
+
+<!--    <bean id="accountService" class="com.spr.scopes.DefaultAccountService" scope="prototype"/>-->
+
+
+<!--    <bean id="loginAction" class="com.spr.scopes.LoginAction" scope="request"/>-->
+
+
+<!--    <bean id="userPreferences" class="com.spr.scopes.UserPreferences" scope="session">-->
+<!--        <aop:scoped-proxy/>-->
+<!--&lt;!&ndash;        <aop:scoped-proxy proxy-target-class="false"/>&ndash;&gt;-->
+<!--    </bean>-->
+<!--    <bean id="userManager" class="com.spr.scopes.UserManager">-->
+<!--        <property name="userPreferences" ref="userPreferences"/>-->
+<!--    </bean>-->
+
+
+<!--    <bean id="appPreferences" class="com.spr.scopes.AppPreferences" scope="application"/>-->
+
+
+<!--    <bean id="..." class="..." scope="thread"-->
+
+
+<!--    <bean class="org.springframework.beans.factory.config.CustomScopeConfigurer">-->
+<!--        <property name="scopes">-->
+<!--            <map>-->
+<!--                <entry key="thread">-->
+<!--                    <bean class="org.springframework.context.support.SimpleThreadScope"/>-->
+<!--                </entry>-->
+<!--            </map>-->
+<!--        </property>-->
+<!--    </bean>-->
+
+<!--    <bean id="thing2" class="com.spr.scopes.Custom" scope="thread">-->
+<!--        <property name="name" value="Rick"/>-->
+<!--        <aop:scoped-proxy/>-->
+<!--    </bean>-->
+
+<!--    <bean id="thing1" class="com.spr.scopes.Custom">-->
+<!--        <property name="thing2" ref="thing2"/>-->
+<!--    </bean>-->
+
+
+<!--    <bean id="exampleInitBean" class="com.spr.nature.ExampleBean" init-method="init"/>-->
+<!--    <bean id="exampleInitBean2" class="com.spr.nature.ExampleBean2"/>-->
+<!--    <bean id="anotherExInitBean" class="com.spr.nature.AnotherEx2" destroy-method="cleanup"/>-->
+<!--    <bean id="anotherExInitBean2" class="com.spr.nature.AnotherEx3"/>-->
+
+
+<!--    <bean id="blogService" class="com.spr.nature.DefaultBlogService">-->
+<!--        <property name="blogDao" ref="blogDao"/>-->
+<!--    </bean>-->
+
+
+<!--    <bean id="lifecycleProcessor" class="org.springframework.context.support.DefaultLifecycleProcessor">-->
+<!--        <property name="timeoutPerShutdownPhase" value="10000"/>-->
+<!--    </bean>-->
+
+
+<!--    <bean id="inheritedTestBean" abstract="true"-->
+<!--          class="org.springframework.beans.TestBean">-->
+<!--        <property name="name" value="parent"/>-->
+<!--        <property name="age" value="1"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="inheritsWithDifferentClass"-->
+<!--          class="org.springframework.beans.DerivedTestBean"-->
+<!--          parent="inheritedTestBean" init-method="initialize">-->
+<!--        <property name="name" value="override"/>-->
+<!--    </bean>-->
 
 </beans>
 
