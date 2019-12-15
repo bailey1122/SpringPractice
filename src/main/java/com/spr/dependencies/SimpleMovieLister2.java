@@ -1,11 +1,11 @@
-package com.spr.dependencies;
-
-// setter-based Dependency Injection
-public class SimpleMovieLister2 {
-
-//    private MovieFinder movieFinder;
+//package com.spr.dependencies;
 //
-//    public void setMovieFinder(MovieFinder movieFinder) {
-//        this.movieFinder = movieFinder;
-//    }
-}
+//// setter-based Dependency Injection
+//public class SimpleMovieLister2 {
+//
+////    private MovieFinder movieFinder;
+////
+////    public void setMovieFinder(MovieFinder movieFinder) {
+////        this.movieFinder = movieFinder;
+////    }
+//}

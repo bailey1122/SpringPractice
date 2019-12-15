@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+    <context:component-scan base-package="com.spr.spr4e"/>
+
+<!--    <bean id="compactDisc" class="com.spr.spr4e.ch2.SgtPeppers">-->
+<!--    </bean>-->
+
+
+<!--    <bean id="compactDisc" class="com.spr.spr4e.ch2.BlankDisc"-->
+<!--            p:title="Sgt. Pepper's Lonely Hearts Club Band"-->
+<!--            p:artist="The Beatles">-->
+<!--            <property name="tracks">-->
+<!--                <list>-->
+<!--                    <value>Sgt. Pepper's Lonely Hearts Club Band</value>-->
+<!--                    <value>With a Little Help from My Friends</value>-->
+<!--                    <value>Lucy in the Sky with Diamonds</value>-->
+<!--                    <value>Getting Better</value>-->
+<!--                    <value>Fixing a Hole</value>-->
+<!--                </list>-->
+<!--            </property>-->
+<!--&lt;!&ndash;            <constructor-arg value="Sgt. Pepper's Lonely Hearts Club Band" />&ndash;&gt;-->
+<!--&lt;!&ndash;            <constructor-arg value="The Beatles" />&ndash;&gt;-->
+<!--&lt;!&ndash;            <constructor-arg>&ndash;&gt;-->
+<!--&lt;!&ndash;                <list>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <value>Sgt. Pepper's Lonely Hearts Club Band</value>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <value>With a Little Help from My Friends</value>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <value>Lucy in the Sky with Diamonds</value>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <value>Getting Better</value>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <value>Fixing a Hole</value>&ndash;&gt;-->
+<!--&lt;!&ndash;                </list>&ndash;&gt;-->
+<!--&lt;!&ndash;            </constructor-arg>&ndash;&gt;-->
+<!--    &lt;!&ndash;          c:_0="Sgt. Pepper's Lonely Hearts Club Band"&ndash;&gt;-->
+<!--    &lt;!&ndash;          c:_1="The Beatles" >&ndash;&gt;-->
+<!--    &lt;!&ndash;            c:title="Sgt. Pepper's Lonely Hearts Club Band"&ndash;&gt;-->
+<!--    &lt;!&ndash;            c:artist="The Beatles" >&ndash;&gt;-->
+<!--    </bean>-->
+
+
+<!--    <bean class="com.spr.spr4e.ch2.CDConfig"/>-->
+
+        <import resource="cdplayer-config.xml"/>
+
+    <bean id="mediap" class="com.spr.spr4e.ch2.CDPlayer"
+          c:_0-ref="compactDisc">
+<!--            p:compactDisc-ref="compactDisc">-->
+<!--          <property name="compactDisc" ref="compactDisc"/>-->
+<!--           c:cd-ref="compactDisc">-->
+<!--        <constructor-arg ref="compactDisc"/>-->
+    </bean>
+
+</beans>

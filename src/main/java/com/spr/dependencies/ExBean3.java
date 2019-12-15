@@ -1,16 +1,16 @@
-package com.spr.dependencies;
-
-// by using a static factory method
-public class ExBean3 {
-
-//    private ExBean3(...) {
-//        //
-//    }
+//package com.spr.dependencies;
 //
-//    public static ExBean3 createInstance(AnotherBean anotherBean,
-//                     YetAnotherBean yetAnotherBean, int i) {
-//        ExBean3 eb = new ExBean3(...);
+//// by using a static factory method
+//public class ExBean3 {
 //
-//        return eb;
-//    }
-}
+////    private ExBean3(...) {
+////        //
+////    }
+////
+////    public static ExBean3 createInstance(AnotherBean anotherBean,
+////                     YetAnotherBean yetAnotherBean, int i) {
+////        ExBean3 eb = new ExBean3(...);
+////
+////        return eb;
+////    }
+//}

@@ -1,6 +1,6 @@
-package com.spr.others;
-
-public interface MobileProcessor {
-
-    void process();
-}
+//package com.spr.others;
+//
+//public interface MobileProcessor {
+//
+//    void process();
+//}
