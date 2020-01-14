@@ -31,4 +31,11 @@ public class ConfigD {
 //        cdPlayer.setCompactDisc(compactDisc);
 //        return cdPlayer;
 //    }
+
+//    @Bean
+//    public CompactDisc sgtPeppers() {
+//        return new BlankDisc(
+//                "Sgt. Pepper's Lonely Hearts Club Band",
+//                "The Beatles");
+//    }
 }

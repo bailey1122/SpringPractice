@@ -8,15 +8,32 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
     <context:component-scan base-package="com.spr.spr4e"/>
+    <context:property-placeholder/>
 
 <!--    <bean id="compactDisc" class="com.spr.spr4e.ch2.SgtPeppers">-->
 <!--    </bean>-->
 
+<!--    <bean id="blank" class="com.spr.spr4e.ch2.BlankDisc"-->
+<!--          c:title="#{systemProperties['disc.title']}"-->
+<!--          c:artist="#{systemProperties['disc.artist']}"/>-->
+<!--          c:title="${disc.title}"-->
+<!--          c:artist="${disc.artist}"/>-->
 
-<!--    <bean id="compactDisc" class="com.spr.spr4e.ch2.BlankDisc"-->
-<!--            p:title="Sgt. Pepper's Lonely Hearts Club Band"-->
-<!--            p:artist="The Beatles">-->
-<!--            <property name="tracks">-->
+    <bean id="compactDisc" class="com.spr.spr4e.ch2.BlankDisc"
+            p:title="Sgt. Pepper's Lonely Hearts Club Band"
+            p:artist="The Beatles">
+            <property name="tracks">
+                <list>
+                    <value>Sgt. Pepper's Lonely Hearts Club Band</value>
+                    <value>With a Little Help from My Friends</value>
+                    <value>Lucy in the Sky with Diamonds</value>
+                    <value>Getting Better</value>
+                    <value>Fixing a Hole</value>
+                </list>
+            </property>
+<!--            <constructor-arg value="Sgt. Pepper's Lonely Hearts Club Band" />-->
+<!--            <constructor-arg value="The Beatles" />-->
+<!--            <constructor-arg>-->
 <!--                <list>-->
 <!--                    <value>Sgt. Pepper's Lonely Hearts Club Band</value>-->
 <!--                    <value>With a Little Help from My Friends</value>-->
@@ -24,23 +41,12 @@
 <!--                    <value>Getting Better</value>-->
 <!--                    <value>Fixing a Hole</value>-->
 <!--                </list>-->
-<!--            </property>-->
-<!--&lt;!&ndash;            <constructor-arg value="Sgt. Pepper's Lonely Hearts Club Band" />&ndash;&gt;-->
-<!--&lt;!&ndash;            <constructor-arg value="The Beatles" />&ndash;&gt;-->
-<!--&lt;!&ndash;            <constructor-arg>&ndash;&gt;-->
-<!--&lt;!&ndash;                <list>&ndash;&gt;-->
-<!--&lt;!&ndash;                    <value>Sgt. Pepper's Lonely Hearts Club Band</value>&ndash;&gt;-->
-<!--&lt;!&ndash;                    <value>With a Little Help from My Friends</value>&ndash;&gt;-->
-<!--&lt;!&ndash;                    <value>Lucy in the Sky with Diamonds</value>&ndash;&gt;-->
-<!--&lt;!&ndash;                    <value>Getting Better</value>&ndash;&gt;-->
-<!--&lt;!&ndash;                    <value>Fixing a Hole</value>&ndash;&gt;-->
-<!--&lt;!&ndash;                </list>&ndash;&gt;-->
-<!--&lt;!&ndash;            </constructor-arg>&ndash;&gt;-->
-<!--    &lt;!&ndash;          c:_0="Sgt. Pepper's Lonely Hearts Club Band"&ndash;&gt;-->
-<!--    &lt;!&ndash;          c:_1="The Beatles" >&ndash;&gt;-->
-<!--    &lt;!&ndash;            c:title="Sgt. Pepper's Lonely Hearts Club Band"&ndash;&gt;-->
-<!--    &lt;!&ndash;            c:artist="The Beatles" >&ndash;&gt;-->
-<!--    </bean>-->
+<!--            </constructor-arg>-->
+    <!--          c:_0="Sgt. Pepper's Lonely Hearts Club Band"-->
+    <!--          c:_1="The Beatles" >-->
+    <!--            c:title="Sgt. Pepper's Lonely Hearts Club Band"-->
+    <!--            c:artist="The Beatles" >-->
+    </bean>
 
 
 <!--    <bean class="com.spr.spr4e.ch2.CDConfig"/>-->

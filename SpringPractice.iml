@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4">
+  <component name="FacetManager">
+    <facet type="web" name="Web">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/src/main/webapp" relative="/" />
+        </webroots>
+        <sourceRoots>
+          <root url="file://$MODULE_DIR$/src/main/resources" />
+          <root url="file://$MODULE_DIR$/src/main/java" />
+        </sourceRoots>
+      </configuration>
+    </facet>
+    <facet type="AspectJ" name="AspectJ">
+      <configuration>
+        <option name="aspectPath">
+          <projectLibrary>
+            <option name="name" value="aspectj-1.9.5" />
+          </projectLibrary>
+          <projectLibrary>
+            <option name="name" value="Maven: org.aspectj:aspectjrt:1.9.4" />
+          </projectLibrary>
+          <projectLibrary>
+            <option name="name" value="Maven: org.aspectj:aspectjweaver:1.9.4" />
+          </projectLibrary>
+          <projectLibrary>
+            <option name="name" value="Maven: org.aspectj:aspectjtools:1.9.4" />
+          </projectLibrary>
+          <projectLibrary>
+            <option name="name" value="Maven: org.springframework:spring-aop:5.2.0.RELEASE" />
+          </projectLibrary>
+          <projectLibrary>
+            <option name="name" value="Maven: org.springframework:spring-aspects:5.2.1.RELEASE" />
+          </projectLibrary>
+        </option>
+      </configuration>
+    </facet>
+  </component>
+</module>

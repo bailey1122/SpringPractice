@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:component-scan base-package="com.spr.spr4e.ch4"/>
+    <aop:aspectj-autoproxy/>
+
+<!--    <bean class="com.spr.spr4e.ch4.Audience"/>-->
+<!--    <bean class="com.spr.spr4e.ch4.ConcertConfig"/>-->
+
+<!--    <bean class="com.spr.spr4e.ch4.Actress"/>-->
+
+
+<!--    <bean class="com.spr.spr4e.ch4.EncoreableIntroducer"/>-->
+
+    <aop:config>
+        <aop:aspect ref="audience">
+            <aop:pointcut id="performance"
+                          expression="execution(* com.spr.spr4e.ch4.Performance.perform(..)))"/>
+
+            <aop:around pointcut-ref="performance"
+                method="watchPerformance"/>
+
+<!--            <aop:before-->
+<!--                pointcut-ref="performance"-->
+<!--                method="silenceCellPhones"/>-->
+<!--            &lt;!&ndash;                pointcut="execution(**com.spr.spr4e.ch4.Performance.perform(..))"&ndash;&gt;-->
+
+<!--            <aop:before-->
+<!--                    pointcut-ref="performance"-->
+<!--                    method="takeSeats"/>-->
+<!--            &lt;!&ndash;                pointcut="execution(**com.spr.spr4e.ch4.Performance.perform(..)))"&ndash;&gt;-->
+
+<!--            <aop:after-returning-->
+<!--                    pointcut-ref="performance"-->
+<!--                    method="applause"/>-->
+<!--            &lt;!&ndash;                pointcut="execution(**com.spr.spr4e.ch4.Performance.perform(..)))"&ndash;&gt;-->
+
+<!--            <aop:after-throwing-->
+<!--                    pointcut-ref="performance"-->
+<!--                    method="demandRefund"/>-->
+<!--            &lt;!&ndash;                pointcut="execution(**com.spr.spr4e.ch4.Performance.perform(..)))"&ndash;&gt;-->
+
+        </aop:aspect>
+    </aop:config>
+
+</beans>
